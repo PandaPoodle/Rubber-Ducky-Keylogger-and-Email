@@ -1,0 +1,2 @@
+# Rubber-Ducky-Keylogger-and-Email
+This is some ducky script code that runs a keylogger script and an email script to email the keylogger file to a specific email. The original creator of the keylogger script is Creator: Securethelogs | @Securethelogs. All that I have done was take that script and combine it with an email script all written in ducky script code so that it can be installed and run on a Rubber Ducky USB.
